@@ -39,6 +39,8 @@ args.model_name = os.path.join(args.model_dir, args.ml_cls + ".pickle")
 
 app = Flask(__name__)
 
+app.secret_key = 'COMP4312_FinalProject'
+
 model_api = load(args.model_name)
 
 
