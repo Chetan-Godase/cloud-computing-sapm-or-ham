@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>ken koniouchine</h1>
- <h1>Chetan Godase</h1>
- <h1>Dong Duong Trinh</h1>
-<h1>Yaohan Xing</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style='color:red'>{% block title %} Welcome to COMP 4312 FINAL PROJECT {% endblock %}</h1>
+    <h2 style='color:blue'>We are trying to build some ML model and deploy it to the cloud!</h2>
+    <h2> Our group member
+    <ul>
+        <li>
+            Dong Duong Trinh
+        </li>
+        <li>
+            Ken Koniouchine
+        </li>
+        <li>
+            Chetan Godase
+        </li>
+        <li>
+            Yaohan Xing
+        </li>
+    </ul>
+    </h2>
+{% endblock %}
