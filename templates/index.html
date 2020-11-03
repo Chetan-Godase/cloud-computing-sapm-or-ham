@@ -1,21 +1,57 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1 style='color:red'>{% block title %} Welcome to COMP 4312 FINAL PROJECT {% endblock %}</h1>
-    <h2 style='color:blue'>We are trying to build some ML model and deploy it to the cloud!</h2>
-    <h2> Our group member
-    <ul>
-        <li>
-            Dong Duong Trinh
-        </li>
-        <li>
-            Ken Koniouchine
-        </li>
-        <li>
-            Chetan Godase
-        </li>
-        <li>
-            Yaohan Xing
-        </li>
-    </ul>
-    </h2>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Our Group Members</h1>
+      <p class="lead text-muted">Weclome to our COMP 4312 final project. We're building an ML model for the cloud!</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Check out our work!</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+    </div>
+  </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <div class="card-body">
+                      <h3>Dong Duong Trinh</h3>
+                      <p class="card-text">Type in Dong's description here</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <div class="card-body">
+                      <h3>Kenneth Koniouchine</h3>
+                      <p class="card-text">Kenneth has been focusing on the UI portion of checkpoint 1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <div class="card-body">
+                      <h3>Chetan Godase</h3>
+                      <p class="card-text">Chetan is a good person. He will need to write something here</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <div class="card-body">
+                      <h3>Yaohan Xing</h3>
+                      <p class="card-text">Yaohan is also a good person. Like Chetan.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
