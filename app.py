@@ -13,11 +13,11 @@ import shlex
 
 argparser = argparse.ArgumentParser(sys.argv[0])
 
-argparser.add_argument('--train_file', help='Trained file', default="../data/smsspamcollection/train.csv", type=str)
+argparser.add_argument('--train_file', help='Trained file', default="data/smsspamcollection/train.csv", type=str)
 
-argparser.add_argument('--dev_file', help='Developed file', default="../data/smsspamcollection/test.csv", type=str)
+argparser.add_argument('--dev_file', help='Developed file', default="data/smsspamcollection/test.csv", type=str)
 
-argparser.add_argument('--test_file', help='Tested file', default="../data/smsspamcollection/test.csv", type=str)
+argparser.add_argument('--test_file', help='Tested file', default="data/smsspamcollection/test.csv", type=str)
 
 argparser.add_argument("--tfidf", action='store_true', default=False, help="tfidf flag")
 
@@ -27,7 +27,7 @@ argparser.add_argument("--scaler", action='store_true', default=False, help="sca
 
 argparser.add_argument('--ml_cls', help='Machine learning classifier', default="MLP", type=str)
 
-argparser.add_argument('--model_dir', help='Model dir', default="../data/smsspamcollection/", type=str)
+argparser.add_argument('--model_dir', help='Model dir', default="data/smsspamcollection/", type=str)
 
 args, unknown = argparser.parse_known_args()
 
