@@ -10,7 +10,6 @@ import signal
 import datetime
 import sys
 import shlex
-import pymysql
 
 argparser = argparse.ArgumentParser(sys.argv[0])
 
@@ -63,38 +62,10 @@ def index():
     return render_template("index.html")
 
 
-
 @app.route('/about')
 def about():
     return render_template("about.html")
 
-@app.route('/database')
-def database():
-    # When deployed to App Engine, the `GAE_ENV` environment variable will be
-    # set to `standard`
-    if os.environ.get('GAE_ENV') == 'standard':
-        # If deployed, use the local socket interface for accessing Cloud SQL
-        unix_socket = '/cloudsql/{}'.format(db_connection_name)
-        cnx = pymysql.connect(user=db_user, password=db_password,
-                              unix_socket=unix_socket, db=db_name)
-    else:
-        # If running locally, use the TCP connections instead
-        # Set up Cloud SQL Proxy (cloud.google.com/sql/docs/mysql/sql-proxy)
-        # so that your application can use 127.0.0.1:3306 to connect to your
-        # Cloud SQL instance
-        host = '127.0.0.1'
-        cnx = pymysql.connect(user=db_user, password=db_password,
-                              host=host, db=db_name)
-
-    with cnx.cursor() as cursor:
-        cursor.execute('select demo_txt from demo_tbl;')
-        result = cursor.fetchall()
-        current_msg = result[0][0]
-    cnx.close()
-
-    return str(current_msg)
-    # [END gae_python37_cloudsql_mysql]
-    return render_template("database.html")
 
 @app.route('/inference', methods=('GET', 'POST'))
 def inference():
