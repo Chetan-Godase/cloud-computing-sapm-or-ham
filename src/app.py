@@ -1,15 +1,10 @@
 import os
 import argparse
-import subprocess
-import logging
-from flask import Flask, request, jsonify, render_template, url_for, flash, redirect
-from werkzeug.exceptions import abort
-from flask_cors import CORS
+from flask import Flask, request, render_template, flash
 from baselines import load
 import signal
 import datetime
 import sys
-import shlex
 
 argparser = argparse.ArgumentParser(sys.argv[0])
 
@@ -88,4 +83,4 @@ def inference():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
